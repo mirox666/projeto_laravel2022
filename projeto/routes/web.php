@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\FuncionarioController;
 use Illuminate\Support\Facades\App;
 
 /*
@@ -43,8 +44,6 @@ Route::get("funcionario",[\App\Http\Controllers\FuncionarioController::class,"mo
 
 Route::get("dadosFuncionario",[\App\Http\Controllers\FuncionarioController::class,"infoFuncionario"]);
 
-Route::get("funcionarioView",function(){
-    return view("usuario");
-});
+Route::get("funcionarioView",[FuncionarioController::class,"show"]);
 
 

@@ -17,4 +17,10 @@ class FuncionarioController extends Controller
         ];
         dd($info);
     }
+    public function show(){
+        return view("usuario",[
+            "nome"=>"Lavemele Lavaiela",
+            "salario"=>6000
+        ]);
+    }
 }
